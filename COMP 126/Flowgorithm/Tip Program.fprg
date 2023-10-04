@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chris"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-18 12:32:40 PM"/>
+        <attribute name="created" value="Y2hyaXM7Q002NzU7MjAyMy0wOS0xODsxMjoxMTo0MyBQTTsyMTI0"/>
+        <attribute name="edited" value="Y2hyaXM7Q002NzU7MjAyMy0wOS0xODsxMjozMjo0MCBQTTsxOzIyMzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="bill" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="tip" type="Real" array="False" size=""/>
+            <output expression="&quot;How much is the bill?&quot;" newline="True"/>
+            <input variable="bill"/>
+            <output expression="&quot;How much is the total?&quot;" newline="True"/>
+            <input variable="total"/>
+            <assign variable="tip" expression="bill * .2"/>
+            <output expression="&quot;The tip is &quot; &amp; tip &amp; &quot; and the total with tip is &quot; &amp; tip + total" newline="True"/>
+        </body>
+    </function>
+    <function name="testfunc" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+</flowgorithm>

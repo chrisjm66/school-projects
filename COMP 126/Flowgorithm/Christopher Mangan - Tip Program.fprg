@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chris"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-25 11:21:58 AM"/>
+        <attribute name="created" value="Y2hyaXM7Q002NzU7MjAyMy0wOS0yMzsxMjo0MjozMSBQTTsyMTIx"/>
+        <attribute name="edited" value="Y2hyaXM7Q002NzU7MjAyMy0wOS0yNTsxMToyMTo1OCBBTTsyOzIyMjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declare Variables&#13;&#10;"/>
+            <declare name="foodPrice" type="Real" array="False" size=""/>
+            <declare name="taxedFoodPrice" type="Real" array="False" size=""/>
+            <declare name="tippedFoodPrice" type="Real" array="False" size=""/>
+            <declare name="TAXRATE" type="Real" array="False" size=""/>
+            <declare name="TIPRATE" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="tip" type="Real" array="False" size=""/>
+            <assign variable="TIPRATE" expression=".2"/>
+            <assign variable="TAXRATE" expression=".07"/>
+            <comment text="Collect inputs&#13;&#10;"/>
+            <output expression="&quot;Enter food price&quot;" newline="True"/>
+            <input variable="foodPrice"/>
+            <comment text="Calculate&#13;&#10;"/>
+            <assign variable="tax" expression="foodPrice * TAXRATE"/>
+            <assign variable="taxedfoodPrice" expression="foodPrice + tax"/>
+            <assign variable="tip" expression="taxedFoodPrice * TIPRATE"/>
+            <assign variable="tippedFoodPrice" expression="taxedFoodPrice + tip"/>
+            <comment text="Outputs&#13;&#10;"/>
+            <output expression="&quot;Your initial food price:&quot; &amp; foodPrice" newline="True"/>
+            <output expression="&quot;Your tax (7%): &quot; &amp; tax" newline="True"/>
+            <output expression="&quot;Your tip (20%): &quot; &amp; tip" newline="True"/>
+            <output expression="&quot;Your food price with tax: &quot; &amp; taxedFoodPrice" newline="True"/>
+            <output expression="&quot;Your food price with tax and tip (final amount): &quot; &amp; tippedFoodPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
