@@ -19,7 +19,7 @@ public class Assignment5_1 {
 		
 		// Process
 		float finalAmount, finalInterest;
-		String stringFormat = "\t %.3f%% \t \t $%.2f";
+		String stringFormat = "\t %.3f%% \t \t $%.2f \n";
 		
 		// Output
 		System.out.println("\t Interest Rate \t \t Interest Earned");
@@ -27,7 +27,8 @@ public class Assignment5_1 {
 		for( int i = 0; i <= 24; i++) {
 			finalAmount = (float) (principal * (Math.pow(( 1 + ((interestRate / 100) / COMPOUNDS )), (COMPOUNDS * time))));
 			finalInterest = finalAmount - principal;
-			System.out.println( String.format(stringFormat, interestRate, finalInterest));
+			//System.out.println( String.format(stringFormat, interestRate, finalInterest));
+			System.out.printf(stringFormat, interestRate, finalInterest);
 			
 			interestRate+=.125;
 		}
